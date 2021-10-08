@@ -1,0 +1,18 @@
+---
+layout: default.liquid
+eleventyComputed:
+  title: "QR Code | {{ config.title }}"
+---
+<div class="py-5">
+  <p class="w-full text-3xl md:text-6xl text-center font-bold pb-1 md:pb-4">
+    <a href="{{ "/" | url }}">{{ config.shortBaseUrl }}</a>
+  </p>
+
+  {% comment %}
+    Max size of 90vw and 90vh makes the QR code large but still easy to get
+    within the bounds of the screen.
+  {% endcomment %}
+  <img class="mx-auto w-full h-full"
+       style="max-width: 90vw; max-height: 90vh;"
+       src="{{ "/link.qrcode.svg" | url }}" />
+</div>

@@ -1,0 +1,13 @@
+# Site output
+build/
+
+# Webpack output
+src/compiled-assets
+
+# JavaScript
+node_modules/
+
+# Editor files
+*.swp
+*.vim
+.vscode

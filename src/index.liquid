@@ -1,0 +1,88 @@
+---
+layout: default.liquid
+eleventyComputed:
+  title: "{{ config.title }}"
+---
+
+<div class="__index__ px-4 py-10 max-w-screen-sm mx-auto">
+  <div class="text-center mb-4">
+
+    {% if config.profilePic %}
+      <img class="rounded-full w-52 mx-auto mb-2"
+           alt="Profile picture"
+           src="{{ config.profilePic | url }}" />
+    {% endif %}
+
+    <div class="flex justify-center mx-auto">
+      <h1 class="text-4xl font-bold">
+        {{ config.name }}
+      </h1>
+
+      {% if config.pronunciation %}
+        <button id="pronunciationBtn" onclick="playPronunciation()"
+                title="Pronounce my name"
+                class="ml-2 text-3xl text-primary">
+          <i class="fas fa-volume-up"></i>
+        </button>
+
+        <audio controls id="pronunciation" class="hidden"
+               onplay="toggleColors()" onended="toggleColors()">
+          <source src="{{ config.pronunciation | url }}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <script>
+          const pronunciationAudio = document.getElementById("pronunciation");
+          const pronunciationBtn = document.getElementById("pronunciationBtn");
+
+          function toggleColors() {
+            pronunciationBtn.classList.toggle("text-primary");
+            pronunciationBtn.classList.toggle("text-website");
+          }
+
+          function playPronunciation() {
+            pronunciationAudio.play();
+          }
+        </script>
+      {% endif %}
+
+    </div>
+
+    {% if config.tagline %}
+      <p class="mt-2 text-xl font-light">
+        {{ config.tagline }}
+      </p>
+    {% endif %}
+  </div>
+
+  <ul>
+  {%- for s in config.links -%}
+    <li class="mb-3">
+      <a href="{{- s.url | url -}}"
+         title="{{- s.name -}}"
+         class="flex items-center px-2 py-1.5
+                text-xl hover:no-underline
+                bg-white {{ s.hoverBg }}
+                w-full rounded-full shadow-md group">
+        <span class="mx-auto text-center">
+          {% if s.fa %}
+            <i class="{{ s.fa }} {{ s.textColor }} group-hover:text-white"></i>
+          {% endif %}
+
+          <span class="pl-0.5 text-black group-hover:text-white
+                       font-light group-hover:font-bold">
+            <span>
+              {{ s.name }}
+            </span>
+            {% if s.desc %}
+            <span class="text-lg">
+              ({{ s.desc }})
+            </span>
+            {% endif %}
+          </span>
+        </span>
+      </a>
+    </li>
+  {%- endfor -%}
+  </ul>
+</div>

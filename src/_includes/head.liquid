@@ -1,0 +1,53 @@
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>{{ title }}</title>
+<link rel="canonical" href="{{ config.baseUrl }}{{ page.url | url }}">
+
+{%- if description -%}{%- else -%}
+  {%- assign description = config.description -%}
+{%- endif -%}
+<meta name="description" content="{{ description }}">
+
+
+{% comment %}Open Graph tags - see https://ogp.me for more info.{% endcomment %}
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ config.baseUrl }}{{ page.url | url }}" />
+{% if config.openGraph %}
+<meta
+  property="og:image"
+  content="{{ config.baseUrl }}{{ config.openGraph | url }}"
+/>
+{% endif %}
+<meta property="og:description" content="{{ description }}" />
+
+
+{% comment %}Twitter tags - see https://ogp.me for more info.{% endcomment %}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ title }}" />
+<meta name="twitter:description" content="{{ description }}" />
+{% if config.twitterPreview %}
+<meta
+   name="twitter:image"
+   content="{{ config.baseUrl }}{{ config.twitterPreview | url }}"
+/>
+{% endif %}
+
+
+{% comment %}Stylesheets{% endcomment %}
+<link rel="stylesheet" href="{{ "/assets/main.css" | url }}?{{ cacheBust.mainCss }}" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+{%- if katex -%}
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+      integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+      crossorigin="anonymous">
+{%- endif -%}
+
+
+{% comment %} Favicon generated with eleventy-favicon {% endcomment %}
+{% favicon 'src/favicon.svg' %}

@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "prism-material-dark";
+
+//
+// Base styles.
+//
+
+@layer base {
+  a {
+    @apply text-primary hover:text-primary-dark hover:underline;
+  }
+  a.permalink,
+  .prose a.permalink {
+    @apply pl-0.5 text-gray-200 hover:text-primary hover:no-underline;
+  }
+  pre {
+    @apply text-sm;
+  }
+}
+
+//
+// Scrollbar and selection.
+//
+
+::selection {
+  background-color: rgba(#c0c0c0, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+//
+// Page-specific styles included here because HTML is not processed by PostCSS.
+//
+
+.__index__ {
+}

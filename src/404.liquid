@@ -1,0 +1,15 @@
+---
+layout: default.liquid
+title: 404
+description: Page Not Found
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+
+<div class="w-full text-center my-8">
+  <h1 class="text-9xl font-bold">{{- title -}}</h1>
+  <p class="text-4xl text-center">{{- description -}}</p>
+  <p class="mt-2">
+    <a class="text-xl text-center font-bold" href="{{ "/" | url }}">Go Back</a>
+  </p>
+</div>

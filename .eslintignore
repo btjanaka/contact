@@ -1,0 +1,6 @@
+# Temporary directories.
+node_modules
+build
+
+# Include the Eleventy config.
+!.eleventy.js
