@@ -13,8 +13,8 @@ card can be printed out, folded up to standard business card size, and handed
 out.
 
 - [Tutorial and Code](https://github.com/btjanaka/contact)
+- [Presentation Slides](https://btjanaka.net/eleventy-business-card/)
 - [Demo](https://contact.btjanaka.net)
-- Presentation: Coming soon!
 
 ## Tutorial
 
