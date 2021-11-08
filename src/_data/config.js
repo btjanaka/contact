@@ -20,7 +20,8 @@ module.exports = {
   // Name pronunciation. Set to null to leave out.
   pronunciation: "/audio/btjanaka.mp3",
 
-  // Tagline below profile picture on home page. Set to null to leave out.
+  // Tagline that shows up below the profile picture on the home page and below
+  // the name on the business card. Set to null to leave out.
   tagline: "PhD Student, ICAROS Lab @ USC",
 
   // Path to Open Graph image. Change this URL whenever the image changes so
