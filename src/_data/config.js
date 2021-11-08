@@ -137,5 +137,12 @@ module.exports = {
       textColor: "text-black",
       hoverBg: "hover:bg-black",
     },
+    {
+      name: "How to Make This Website",
+      url: "https://github.com/btjanaka/contact",
+      fa: "far fa-clipboard",
+      textColor: "text-black",
+      hoverBg: "hover:bg-black",
+    },
   ],
 };
