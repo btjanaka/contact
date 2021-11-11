@@ -27,12 +27,18 @@ handed out.
    [this one](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/).
 1. Visit `/card.svg` on your deployed site and print out the page.
 
-   **Note:** Printing from the browser seems to interfere with the proportions
+   **Note 1:** Printing from the browser seems to interfere with the proportions
    of the SVG. Thus, it is ideal if you download both `/card.svg` and
    `/link.qrcode.svg` to the same directory and then print out `card.svg` from a
    vector graphics editor like Inkscape.
 
    > `link.qrcode.svg` is needed because `card.svg` links to it.
+
+   **Note 2:** The card generation is still in its early stages. For instance,
+   we only support letter paper (8.5" x 11"), and long names will overflow onto
+   the QR code. In these cases, you may need to edit the card on your own (see
+   [below](#editing-the-card)). PRs are welcome if anybody knows how to
+   implement this card generation properly.
 
 1. Follow [this tutorial](https://youtu.be/oSXVQ_N-7D0) to fold the card.
 
