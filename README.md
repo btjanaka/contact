@@ -2,8 +2,12 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e6286d91-fdc6-4e35-b8cf-c5276c888036/deploy-status)](https://app.netlify.com/sites/btjanakacontact/deploys)
 
-This repo contains the tutorial and code for my 2021 Eleventies talk, "Building
-a Modern Business Card with Eleventy."
+This repo contains the tutorial and code for "Building a Modern Business Card
+with Eleventy," a talk I gave at the 2021
+[Eleventies](https://www.meetup.com/JAMstack-Toronto/events/281278073/). The
+Eleventies is a series of lightning talks on the
+[Eleventy](https://www.11ty.dev) web framework hosted by
+[Jamstack Toronto](https://twitter.com/JAMstackTORONTO).
 
 **TL;DR:** We build a
 [minimalist SVG business card](https://contact.btjanaka.net/card.svg) that
@@ -28,7 +32,7 @@ handed out.
 1. Visit `/card.svg` on your deployed site and print out the page.
 
    **Note 1:** Printing from the browser seems to interfere with the proportions
-   of the SVG. Thus, it is ideal if you download both `/card.svg` and
+   of the SVG. It is ideal if you download both `/card.svg` and
    `/link.qrcode.svg` to the same directory and then print out `card.svg` from a
    vector graphics editor like Inkscape.
 
