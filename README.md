@@ -64,6 +64,20 @@ and edit them with a vector graphics editor like
 
 **Note:** `link.qrcode.svg` is needed because `card.svg` links to it.
 
+## Future Ideas
+
+- Improve automatic generation of the business card by using a library such as
+  [labelmake](https://github.com/hand-dot/labelmake) rather than trying to hack
+  SVGs. labelmake would be able to automatically generate the PDF, which is
+  better than creating an SVG and asking the browser to print the SVG (the
+  browser tends to distort the SVG).
+- Enable the card to work offline. For example, switching the QRCode to
+  represent a [vCard](https://en.wikipedia.org/wiki/VCard) (rather than a single
+  link) would enable people to easily add the contact to their phone even
+  without internet access. However, the vCard would introduce a lot more info
+  that could potentially change over time, which would mean reprinting the
+  business card. Furthermore, it is still possible to simply hand out the card.
+
 ## Credits
 
 This project's initial code structure was based on a wonderful
