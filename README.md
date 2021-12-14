@@ -28,6 +28,7 @@ handed out.
 1. [Fork this repo.](https://github.com/btjanaka/contact/fork)
 1. In your fork, edit all the fields in
    [`src/_data/config.js`](src/_data/config.js).
+1. Replace `src/favicon.svg` in your fork with your own favicon.
 1. Deploy your site to Netlify with a guide such as
    [this one](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/).
 1. Visit `/card.svg` on your deployed site and print out the page.
