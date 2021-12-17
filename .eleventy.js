@@ -62,8 +62,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-rss"));
 
   // Eleventy favicon.
-  eleventyConfig.addPlugin(require("eleventy-favicon"), {
+  eleventyConfig.addPlugin(require("./eleventy/favicon-plugin.js"), {
     destination: outputDir,
+    pathPrefix: "",
+    appleBkgdColor: "white",
+    applePad: 5,
   });
 
   //
