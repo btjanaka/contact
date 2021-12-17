@@ -56,7 +56,7 @@ function generateAppleFavicon(
     .readFile(sourcePath, "utf8")
     .then((s) => {
       // Removes the XML declaration. Test regexes here: https://regex101.com
-      s = s.replace(/\<.*xml[^>]*\>/, "");
+      s = s.replace(/^\<[^<]*xml[^>]*\>/, "");
 
       // Scale so there can be padding.
       const scale = (180 - 2 * pad) / Math.max(width, height);
