@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   // Copy static files.
-  staticFiles = ["robots.txt", "favicon.ico", "imgs/", "favicon/", "audio/"];
+  staticFiles = ["imgs/", "audio/"];
   for (const file of staticFiles) {
     eleventyConfig.addPassthroughCopy(path.join(inputDir, file));
   }
