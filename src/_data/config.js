@@ -87,7 +87,7 @@ module.exports = {
       hoverBg: "hover:bg-yellow-500",
     },
     {
-      name: "Primary Email",
+      name: "Personal Email",
       desc: "bryon@tjanaka.net",
       url: "mailto:bryon@tjanaka.net",
       fa: "fas fa-envelope",
@@ -95,7 +95,7 @@ module.exports = {
       hoverBg: "hover:bg-gray-600",
     },
     {
-      name: "Secondary Email",
+      name: "Professional Email",
       desc: "tjanaka@usc.edu",
       url: "mailto:tjanaka@usc.edu",
       fa: "fas fa-envelope",
