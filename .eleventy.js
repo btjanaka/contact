@@ -66,7 +66,7 @@ module.exports = function (eleventyConfig) {
     destination: outputDir,
     pathPrefix: "",
     appleBkgdColor: "white",
-    applePad: 5,
+    applePad: 25,
   });
 
   //
