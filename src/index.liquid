@@ -21,7 +21,7 @@ eleventyComputed:
       {% if config.pronunciation %}
         <button id="pronunciationBtn" onclick="playPronunciation()"
                 title="Pronounce my name"
-                class="ml-2 text-3xl text-primary">
+                class="ml-2 text-3xl text-gray-400">
           <i class="fas fa-volume-up"></i>
         </button>
 
@@ -36,7 +36,7 @@ eleventyComputed:
           const pronunciationBtn = document.getElementById("pronunciationBtn");
 
           function toggleColors() {
-            pronunciationBtn.classList.toggle("text-primary");
+            pronunciationBtn.classList.toggle("text-gray-400");
             pronunciationBtn.classList.toggle("text-website");
           }
 
