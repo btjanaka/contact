@@ -75,14 +75,14 @@ module.exports = {
     {
       name: "CV",
       url: "https://btjanaka.net/btjanaka-cv.pdf",
-      fa: "far fa-file-alt",
+      fa: "fas fa-file-alt",
       textColor: "text-green-500",
       hoverBg: "hover:bg-green-500",
     },
     {
       name: "Resume",
       url: "https://btjanaka.net/btjanaka-resume.pdf",
-      fa: "far fa-file-alt",
+      fa: "fas fa-file-alt",
       textColor: "text-yellow-500",
       hoverBg: "hover:bg-yellow-500",
     },
