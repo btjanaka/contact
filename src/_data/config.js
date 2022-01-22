@@ -138,6 +138,13 @@ module.exports = {
       hoverBg: "hover:bg-black",
     },
     {
+      name: "Thingiverse",
+      url: "https://www.thingiverse.com/btjanaka/makes",
+      fa: "fas fa-tools",
+      textColor: "text-blue-500",
+      hoverBg: "hover:bg-blue-500",
+    },
+    {
       name: "How to Make This Website",
       url: "https://github.com/btjanaka/contact",
       fa: "far fa-clipboard",
