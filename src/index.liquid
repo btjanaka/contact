@@ -8,9 +8,16 @@ eleventyComputed:
   <div class="text-center mb-4">
 
     {% if config.profilePic %}
-      <img class="rounded-full w-52 mx-auto mb-2"
-           alt="Profile picture"
-           src="{{ config.profilePic | url }}" />
+      {% comment %}
+        Show the small image to reduce data usage, but allow downloading the
+        high-res image. This is in anticipation of when people come to the
+        website and want to download a picture.
+      {% endcomment %}
+      <a href="{{ config.profilePic.best | url }}"
+         title="Click to download"
+         class="block rounded-full w-48 h-48 mx-auto mb-2"
+         style="background-image: url({{ config.profilePic.small | url }})">
+      </a>
     {% endif %}
 
     <div class="flex justify-center mx-auto">

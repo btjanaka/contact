@@ -15,7 +15,10 @@ module.exports = {
   name: "Bryon Tjanaka",
 
   // Profile picture on home page. Set to null to leave out.
-  profilePic: "/imgs/btjanaka.jpg",
+  profilePic: {
+    best: "https://btjanaka.net/static/btjanaka.jpg",
+    small: "https://btjanaka.net/static/btjanaka-200x200.jpg",
+  },
 
   // Name pronunciation. Set to null to leave out.
   pronunciation: "/audio/btjanaka.mp3",
