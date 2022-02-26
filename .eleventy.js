@@ -73,53 +73,6 @@ module.exports = function (eleventyConfig) {
   // Shortcodes.
   //
 
-  // Clipboard button using clipboard.js.
-  // Usage: Make sure clipboard.js is included on the page and initialized (this
-  // is done in _includes/scripts.liquid). Then, add {% clipboard %} before the
-  // text to be copied and add {% endclipboard %} after the text to be copied.
-  let clipboardId = 0;
-  eleventyConfig.addPairedShortcode("clipboard", (content) => {
-    const id = `__clipboard__${clipboardId}`;
-    ++clipboardId;
-    return `
-<div class="relative">
-  <div id="${id}">
-    ${content}
-  </div>
-  <button class="clipboard group transition cursor-pointer flex items-center
-                 absolute right-0 top-0 p-2
-                 text-xs text-gray-400 hover:text-white focus:active:text-white
-                 hover:bg-gray-800 hover:bg-opacity-50
-                 focus:active:bg-gray-800 focus:active:bg-opacity-50
-                 focus:active:outline-none"
-          data-clipboard-target="#${id}">
-      <span class="pr-2 hidden group-hover:inline-block group-focus:group-active:hidden">
-        Copy
-      </span>
-      <span class="pr-2 hidden group-hover:hidden group-focus:group-active:inline-block">
-        Copied!
-      </span>
-      <span class="material-icons">content_copy</span>
-  </button>
-</div>`;
-  });
-
-  // YouTube videos.
-  eleventyConfig.addShortcode("youtube", function (id, title) {
-    return `
-<div class="relative w-full h-0"
-     style="padding-bottom: 56.25%">
-  <iframe
-    title="${title}"
-    class="absolute top-0 left-0 w-full h-full"
-    src="https://www.youtube.com/embed/${id}"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-</div>`;
-  });
-
   // Minify HTML.
   if (process.env.ELEVENTY_ENV === "production") {
     eleventyConfig.addTransform("lazy-imgs", (content, outputPath) => {
