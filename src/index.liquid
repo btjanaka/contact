@@ -10,13 +10,14 @@ eleventyComputed:
     {% if config.profilePic %}
       {% comment %}
         Show the small image to reduce data usage, but allow downloading the
-        high-res image. This is in anticipation of when people come to the
-        website and want to download a picture.
+        high-res image. This is in anticipation of when people come to the website
+        and want to download a picture e.g. for presentations.
       {% endcomment %}
       <a href="{{ config.profilePic.best | url }}"
-         title="Click to download"
-         class="block rounded-full w-48 h-48 mx-auto mb-2"
-         style="background-image: url({{ config.profilePic.small | url }})">
+         title="Profile picture - click to download"
+         class="block rounded-full w-48 h-48 mx-auto mb-2 overflow-hidden">
+        <img class="w-full h-full" src="{{ config.profilePic.small | url }}"
+             alt="{{ config.name }} profile picture" />
       </a>
     {% endif %}
 
