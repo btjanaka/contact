@@ -78,8 +78,8 @@ module.exports = function (eleventyConfig) {
   // is done in _includes/scripts.liquid). Then, add {% clipboard %} before the
   // text to be copied and add {% endclipboard %} after the text to be copied.
   let clipboardId = 0;
-  eleventyConfig.addPairedShortcode("clipboard", function (content) {
-    const id = `clipboard-${clipboardId}`;
+  eleventyConfig.addPairedShortcode("clipboard", (content) => {
+    const id = `__clipboard__${clipboardId}`;
     ++clipboardId;
     return `
 <div class="relative">
@@ -88,14 +88,15 @@ module.exports = function (eleventyConfig) {
   </div>
   <button class="clipboard group transition cursor-pointer flex items-center
                  absolute right-0 top-0 p-2
-                 text-xs text-gray-400 hover:text-white focus:text-white
+                 text-xs text-gray-400 hover:text-white focus:active:text-white
                  hover:bg-gray-800 hover:bg-opacity-50
-                 focus:bg-gray-800 focus:bg-opacity-50 focus:outline-none"
+                 focus:active:bg-gray-800 focus:active:bg-opacity-50
+                 focus:active:outline-none"
           data-clipboard-target="#${id}">
-      <span class="pr-2 hidden group-hover:inline-block group-focus:hidden">
+      <span class="pr-2 hidden group-hover:inline-block group-focus:group-active:hidden">
         Copy
       </span>
-      <span class="pr-2 hidden group-hover:hidden group-focus:inline-block">
+      <span class="pr-2 hidden group-hover:hidden group-focus:group-active:inline-block">
         Copied!
       </span>
       <span class="material-icons">content_copy</span>
