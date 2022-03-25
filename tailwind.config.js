@@ -78,6 +78,7 @@ module.exports = {
         pyribs: "#7e57c2",
         vgsa: "#ffcc00",
         website: "#e62020",
+        orcid: "#a6ce39",
       },
       width: customWidths,
     },

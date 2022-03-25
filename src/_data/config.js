@@ -113,6 +113,14 @@ module.exports = {
       hoverBg: "hover:bg-scholar",
     },
     {
+      name: "ORCID",
+      desc: "0000-0002-9602-5039",
+      url: "https://orcid.org/0000-0002-9602-5039",
+      fa: "ai ai-orcid",
+      textColor: "text-orcid",
+      hoverBg: "hover:bg-orcid",
+    },
+    {
       name: "ICAROS Lab",
       url: "https://icaros.usc.edu",
       fa: "fas fa-robot",
