@@ -70,15 +70,14 @@ eleventyComputed:
          title="{{- s.name -}}"
          class="flex items-center px-2 py-1.5
                 text-xl hover:no-underline
-                bg-white {{ s.hoverBg }}
+                bg-white hover:bg-gray-200
                 w-full rounded-full shadow-md group">
         <span class="mx-auto text-center">
           {% if s.fa %}
-            <i class="{{ s.fa }} {{ s.textColor }} group-hover:text-white"></i>
+            <i class="{{ s.fa }} {{ s.textColor }}"></i>
           {% endif %}
 
-          <span class="pl-0.5 text-black group-hover:text-white
-                       group-hover:font-bold">
+          <span class="pl-0.5 text-black">
             <span>
               {{ s.name }}
             </span>
