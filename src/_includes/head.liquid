@@ -18,7 +18,7 @@
 {% if config.openGraph %}
 <meta
   property="og:image"
-  content="{{ config.baseUrl }}{{ config.openGraph | url }}"
+  content="{% if config.openGraph.absolute %}{{ config.openGraph.url }}{% else %}{{ config.baseUrl }}{{ config.openGraph.url | url }}{% endif %}"
 />
 {% endif %}
 <meta property="og:description" content="{{ description }}" />
@@ -31,7 +31,7 @@
 {% if config.twitterPreview %}
 <meta
    name="twitter:image"
-   content="{{ config.baseUrl }}{{ config.twitterPreview | url }}"
+   content="{% if config.twitterPreview.absolute %}{{ config.twitterPreview.url }}{% else %}{{ config.baseUrl }}{{ config.twitterPreview.url | url }}{% endif %}"
 />
 {% endif %}
 

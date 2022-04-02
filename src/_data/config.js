@@ -29,10 +29,16 @@ module.exports = {
 
   // Path to Open Graph image. Change this URL whenever the image changes so
   // that sites like FB change their preview. Set to null to leave out.
-  openGraph: "/imgs/btjanaka.jpg",
+  openGraph: {
+    absolute: true,
+    url: "https://btjanaka.net/static/btjanaka-1000x1000.jpg",
+  },
 
   // Path to Twitter preview image. Set to null to leave out.
-  twitterPreview: "/imgs/btjanaka.jpg",
+  twitterPreview: {
+    absolute: true,
+    url: "https://btjanaka.net/static/btjanaka-1000x1000.jpg",
+  },
 
   // Links to your other websites.
   // - "fa" is the FontAwesome code for the icon; for example, see here:
