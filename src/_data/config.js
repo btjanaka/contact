@@ -37,8 +37,8 @@ module.exports = {
   // Links to your other websites.
   // - "fa" is the FontAwesome code for the icon; for example, see here:
   //   https://fontawesome.com/v5.15/icons/globe-americas
-  // - textColor and hoverBg are configured strangely because tailwind needs to
-  //   pick up on it and avoid purging the class name -- see here:
+  // - textColor is configured strangely because tailwind needs to pick up on it
+  //   and avoid purging the class name -- see here:
   //   https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html
   //   - See tailwind.config.js (in the root of this repo) for how to add custom
   //     colors.
@@ -49,6 +49,13 @@ module.exports = {
       url: "https://btjanaka.net",
       fa: "fas fa-globe-americas",
       textColor: "text-website",
+    },
+    {
+      name: "Email",
+      desc: "bryon@tjanaka.net",
+      url: "mailto:bryon@tjanaka.net",
+      fa: "fas fa-envelope",
+      textColor: "text-gray-600",
     },
     {
       name: "GitHub",
@@ -72,66 +79,22 @@ module.exports = {
       textColor: "text-linkedin",
     },
     {
-      name: "CV",
-      url: "https://btjanaka.net/btjanaka-cv.pdf",
-      fa: "fas fa-file-alt",
-      textColor: "text-green-500",
-    },
-    {
       name: "Resume",
       url: "https://btjanaka.net/btjanaka-resume.pdf",
       fa: "fas fa-file-alt",
       textColor: "text-yellow-500",
     },
     {
-      name: "Email",
-      desc: "bryon@tjanaka.net",
-      url: "mailto:bryon@tjanaka.net",
-      fa: "fas fa-envelope",
-      textColor: "text-gray-600",
-    },
-    {
-      name: "Google Scholar",
-      url: "https://scholar.google.com/citations?hl=en&user=851Y-O8AAAAJ",
-      fa: "ai ai-google-scholar-square",
-      textColor: "text-scholar",
-    },
-    {
-      name: "ORCID",
-      desc: "0000-0002-9602-5039",
-      url: "https://orcid.org/0000-0002-9602-5039",
-      fa: "ai ai-orcid",
-      textColor: "text-orcid",
-    },
-    {
-      name: "ICAROS Lab",
-      url: "https://icaros.usc.edu",
-      fa: "fas fa-robot",
-      textColor: "text-black",
-    },
-    {
-      name: "pyribs",
-      url: "https://pyribs.org",
-      fa: "fas fa-laptop",
-      textColor: "text-pyribs",
-    },
-    {
-      name: "VGSA",
-      url: "https://vgsa.usc.edu",
-      fa: "fas fa-users",
-      textColor: "text-vgsa",
+      name: "CV",
+      url: "https://btjanaka.net/btjanaka-cv.pdf",
+      fa: "fas fa-file-alt",
+      textColor: "text-green-500",
     },
     {
       name: "QR Code",
       url: "/qr",
       fa: "fas fa-link",
       textColor: "text-black",
-    },
-    {
-      name: "Thingiverse",
-      url: "https://www.thingiverse.com/btjanaka/makes",
-      fa: "fas fa-tools",
-      textColor: "text-blue-500",
     },
     {
       name: "How to Make This Website",
