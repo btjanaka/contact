@@ -58,8 +58,8 @@ module.exports = {
     },
     {
       name: "Email",
-      desc: "bryon@tjanaka.net",
-      url: "mailto:bryon@tjanaka.net",
+      desc: "tjanaka@usc.edu",
+      url: "mailto:tjanaka@usc.edu",
       fa: "fas fa-envelope",
       textColor: "text-gray-600",
     },
