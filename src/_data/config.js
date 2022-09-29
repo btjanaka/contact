@@ -17,7 +17,7 @@ module.exports = {
   // Profile picture on home page. Set to null to leave out.
   profilePic: {
     best: "https://btjanaka.net/static/btjanaka.jpg",
-    small: "https://btjanaka.net/static/btjanaka-200x200.jpg",
+    small: "https://btjanaka.net/static/btjanaka-1000x1000.jpg",
   },
 
   // Name pronunciation. Set to null to leave out.
